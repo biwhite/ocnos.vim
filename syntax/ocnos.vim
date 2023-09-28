@@ -92,6 +92,14 @@ syn match   ocnosIpv6       /\s\(\x\{1,4}\:\)\(\:\x\{1,4}\)\{0,4}\(\:\(\(25[0-5]
 syn match   ocnosIpv6       /\s\(\x\{1,4}\:\)\(\:\x\{1,4}\)\{0,4}\(\(\:\x\{1,4}\)\{1,2}\)/
 syn match   ocnosIpv6       /\s\:\(\:\x\{1,4}\)\{0,5}\(\(\:\(\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\(\.\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\)\{3}\)\?\)\|\(\(\:\x\{1,4}\)\{1,2}\)\)/
 
+syn region  ocnosFold       start=/^route-map / end=/^!$/ keepend transparent fold
+syn region  ocnosFold       start=/^ip\(v6\)\? prefix-list / end=/^!$/ keepend transparent fold
+syn region  ocnosFold       start=/^interface / end=/^!$/ keepend transparent fold
+syn region  ocnosFold       start=/^router / end=/^!$/ keepend transparent fold
+syn region  ocnosFold       start=/^ address\-family / end=/^ exit-address-family$/ keepend transparent fold
+syn region  ocnosFold       start=/^ip\(v6\)\? access-list / end=/^!$/ keepend transparent fold
+syn region  ocnosFold       start=/^\(ip vrf\|mac vrf\) / end=/^!$/ keepend transparent fold
+
 hi link ocnosKeyword        Statement
 hi link ocnosProtocol       Type
 hi link ocnosAction         Error

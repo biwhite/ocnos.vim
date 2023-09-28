@@ -6,8 +6,10 @@
 autocmd BufNewFile,BufReadPost *.ocnos set filetype=ocnos
 
 function! s:isSwitchConfig()
+  let firstline = getline(1)
+  if firstline =~# '^! Software version: .*OcNOS.* ' | return 1 | en
   let secondline = getline(2)
-  if secondline =~# '^! Software version: ' | return 1 | en
+  if secondline =~# '^! Software version: .*OcNOS.* ' | return 1 | en
   let fourthline = getline(4)
   if fourthline =~# '^!Last configuration change at ' | return 1 | en
   return 0
