@@ -1,24 +1,14 @@
-cisco.vim
+white
+ocnos.vim
 =========
 
-Vim syntax for Cisco (and other platforms with similar configuration syntax)
-switches and routers (`show run` or `show start`) files.
+Vim syntax for OcNOS switches and routers (`show run` or `show start`) files.
 
-
-before
-------
-
-![config_before](http://momota.github.io/images/20160624_cisco-config_before.png)
-
-after
------
-
-![config_after](http://momota.github.io/images/20160624_cisco-config_after.png)
 
 Author
 ======
 
-[momota](https://github.com/momota)
+[biwhite](https://github.com/biwhite) - forked from Cisco syntax from [momota](https://github.com/momota)
 
 License
 =======
@@ -39,14 +29,14 @@ Pathogen
 
 1. Install with the following command.
 
-        git clone https://github.com/momota/cisco.vim ~/.vim/bundle/cisco.vim
+        git clone https://github.com/biwhite/ocnos.vim ~/.vim/bundle/ocnos.vim
 
 [NeoBundle](https://github.com/Shougo/neobundle.vim)
 ----------------------------------------------------
 
 1. Add the following configuration to your `.vimrc`.
 
-        NeoBundle 'momota/cisco.vim'
+        NeoBundle 'biwhite/ocnos.vim'
 
 2. Install with `:NeoBundleInstall`.
 
@@ -56,6 +46,9 @@ Usage
 
 Limited auto-detection is available based on file contents
 
-Files ending with `*.cisco` will automatically receive the highlighting
+Files ending with `*.ocnos` will automatically receive the highlighting
 
-Or execute `:set ft=cisco`
+Or execute `:set ft=ocnos`
+
+Some syntax folding available with `:set foldmethod=syntax`
+
