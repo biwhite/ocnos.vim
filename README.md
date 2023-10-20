@@ -1,4 +1,3 @@
-white
 ocnos.vim
 =========
 
